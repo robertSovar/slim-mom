@@ -1,5 +1,13 @@
+import Header from "./components/Header/Header";
+import LandingPage from "./components/LandingPage/LandingPage";
+
 function App() {
-  return <div>Slim mom project</div>;
+  return (
+    <>
+      <Header />
+      <LandingPage />
+    </>
+  );
 }
 
 export default App;

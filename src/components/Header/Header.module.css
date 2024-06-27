@@ -1,0 +1,98 @@
+.headerSection {
+  max-width: 320px;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+
+.activeLinks {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.01px;
+  letter-spacing: 0.04em;
+  text-align: right;
+  color: rgba(155, 159, 170, 1);
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.slimSpan {
+  display: none;
+}
+
+.activeLinksContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.headerUnderline {
+  border: 2px solid rgba(224, 224, 224, 1);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .activeLinksContainer {
+    padding: 45px;
+  }
+  .logoAndSpanContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .slimSpan {
+    display: flex;
+    font-size: 16px;
+    color: rgba(33, 33, 33, 1);
+  }
+
+  .slimSpan.slimMom {
+    color: rgba(252, 132, 45, 1);
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerSection {
+    padding: 80px 20px;
+    align-items: baseline;
+    gap: 15px;
+  }
+  .logoPictures {
+    width: 70px;
+    height: 66px;
+  }
+  .logoAndSpanContainer {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .slimSpan {
+    display: flex;
+    font-size: 16px;
+    color: rgba(33, 33, 33, 1);
+    margin-left: -15px;
+  }
+
+  .logoAndSpanContainer::after {
+    content: "|";
+    color: rgba(224, 224, 224, 1);
+    font-size: 32px;
+    margin-left: 10px;
+  }
+
+  .activeLinksContainer {
+    gap: 15px;
+  }
+
+  .slimSpan.slimMom {
+    color: rgba(252, 132, 45, 1);
+    margin-left: 0;
+  }
+
+  .headerUnderline {
+    padding: 80px 0 20px 15px;
+    display: none;
+  }
+}
