@@ -8,19 +8,19 @@ function Header() {
           <picture className={styles.logoSection}>
             <source
               className={styles.logoPictures}
-              srcSet="src\assets\images\header-photos\slim-mom-logo-d-1x.webp, src\assets\images\header-photos\slim-mom-logo-d-2x.webp"
+              srcSet="./assets/images/header-photos/slim-mom-logo-d-1x.webp, ./assets/images/header-photos/slim-mom-logo-d-2x.webp"
               media="(min-width: 1280px)"
             />
             <source
-              srcSet="src\assets\images\header-photos\slim-mom-logo-t-1x.webp, src\assets\images\header-photos\slim-mom-logo-t-2x.webp"
+              srcSet="./assets/images/header-photos/slim-mom-logo-t-1x.webp, ./assets/images/header-photos/slim-mom-logo-t-2x.webp"
               media="(min-width: 321px) and (max-width: 768px)"
             />
             <source
-              srcSet="src\assets\images\header-photos\slim-mom-logo-m-1x.webp, src\assets\images\header-photos\slim-mom-logo-m-2x.webp"
+              srcSet="./assets/images/header-photos/slim-mom-logo-m-1x.webp, ./assets/images/header-photos/slim-mom-logo-m-2x.webp"
               media="(max-width: 320px)"
             />
             <img
-              src="src\assets\images\header-photos\slim-mom-logo-d-1x.webp"
+              src="./assets/images/header-photos/slim-mom-logo-d-1x.webp"
               alt="logo"
             />
           </picture>
