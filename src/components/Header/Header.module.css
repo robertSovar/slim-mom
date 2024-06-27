@@ -3,9 +3,8 @@
   padding: 20px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
-  gap: 15px;
+  gap: 10px;
 }
 
 .activeLinks {
@@ -25,7 +24,7 @@
 
 .activeLinksContainer {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .headerUnderline {
