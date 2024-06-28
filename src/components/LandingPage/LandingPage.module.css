@@ -1,0 +1,76 @@
+.landingPageSection {
+  max-width: 320px;
+  padding: 20px 20px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.landingPageSection input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  padding: 10px;
+}
+
+.landingPageTitle {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.quizFormContainer {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bloodTypeFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bloodTypeForm {
+  display: flex;
+  justify-content: space-evenly;
+  color: rgba(155, 159, 170, 1);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input::placeholder {
+  color: rgba(155, 159, 170, 1);
+}
+
+.bloodTypeParagraph {
+  padding: 0 10px;
+  color: rgba(155, 159, 170, 1);
+}
+
+.bloodTypeForm input {
+  margin-right: 15px;
+}
+
+input[type="radio"] {
+  accent-color: rgba(252, 132, 45, 1);
+}
+
+.bloodTypeBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px;
+}
+
+.submitFormBtn {
+  outline: none;
+  border: none;
+  width: 210px;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 4%;
+  text-align: center;
+  background-color: rgba(252, 132, 45, 1);
+  color: white;
+}
