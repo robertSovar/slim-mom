@@ -7,7 +7,7 @@ function LandingPage() {
         Calculate your daily calorie intake right now{" "}
       </h1>
       <form action="quiz" className={styles.quizFormContainer}>
-        <label htmlFor="quiz">
+        <label>
           <input
             type="number"
             name="height"
@@ -16,7 +16,7 @@ function LandingPage() {
             required
           />
         </label>
-        <label htmlFor="quiz">
+        <label>
           <input
             type="number"
             name="age"
@@ -25,7 +25,7 @@ function LandingPage() {
             required
           />
         </label>
-        <label htmlFor="quiz">
+        <label>
           <input
             type="number"
             name="current"
@@ -34,7 +34,7 @@ function LandingPage() {
             required
           />
         </label>
-        <label htmlFor="quiz">
+        <label>
           <input
             type="number"
             name="desired"

@@ -1,0 +1,35 @@
+.footerSection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 14px;
+  padding-bottom: 35px;
+}
+
+.footerSection a {
+  text-decoration: none;
+  background: rgb(231, 143, 49);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(231, 143, 49, 1) 31%,
+    rgba(5, 5, 5, 0.9837184873949579) 81%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(231, 143, 49, 1) 31%,
+    rgba(5, 5, 5, 0.9837184873949579) 81%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(231, 143, 49, 1) 31%,
+    rgba(5, 5, 5, 0.9837184873949579) 81%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e78f31",endColorstr="#050505",GradientType=1);
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footerSection a:hover {
+  scale: 1.2;
+}
