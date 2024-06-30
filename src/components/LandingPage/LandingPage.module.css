@@ -136,4 +136,10 @@ input[type="radio"] {
     font-size: 34px;
     line-height: 47px;
   }
+
+  .bloodTypeBtnContainer {
+    position: absolute;
+    top: 550px;
+    left: 310px;
+  }
 }
