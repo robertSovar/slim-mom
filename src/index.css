@@ -41,7 +41,7 @@ ul {
       url(./assets/images/background-images/strawberry-background-d-1x.webp),
       url(./assets/images/background-images/shadowDesk.svg);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: top right, center 100px, bottom right, bottom right;
+    background-position: top right, center, bottom right, bottom right;
     background-size: auto;
   }
 }
