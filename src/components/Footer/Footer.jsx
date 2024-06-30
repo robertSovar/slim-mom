@@ -4,13 +4,13 @@ function Footer() {
   return (
     <div className={styles.footerSection}>
       <p>@2024</p>
-      <span>made by </span>{" "}
+      <span>by</span>{" "}
       <a
         href="https://www.linkedin.com/in/robert-sovar/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Sovar Robert Ionut
+        Sovar Robert
       </a>
     </div>
   );

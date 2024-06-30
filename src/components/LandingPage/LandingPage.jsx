@@ -7,43 +7,52 @@ function LandingPage() {
         Calculate your daily calorie intake right now{" "}
       </h1>
       <form action="quiz" className={styles.quizFormContainer}>
-        <label>
-          <input
-            type="number"
-            name="height"
-            id="height"
-            placeholder="Height *"
-            required
-          />
-        </label>
-        <label>
-          <input
-            type="number"
-            name="age"
-            id="age"
-            placeholder="Age *"
-            required
-          />
-        </label>
-        <label>
-          <input
-            type="number"
-            name="current"
-            id="current"
-            placeholder="Current weight *"
-            required
-          />
-        </label>
-        <label>
-          <input
-            type="number"
-            name="desired"
-            id="desired"
-            placeholder="Desired weight *"
-            required
-          />
-        </label>
+        <ul className={styles.gridContainer}>
+          <li className={styles.firstGrid}>
+            {" "}
+            <label>
+              <input
+                type="number"
+                name="height"
+                id="height"
+                placeholder="Height *"
+                required
+              />
+            </label>
+          </li>
+          <li className={styles.secondGrid}>
+            <label>
+              <input
+                type="number"
+                name="age"
+                id="age"
+                placeholder="Age *"
+                required
+              />
+            </label>
+          </li>
+          <li className={styles.thirdGrid}>
+            <label>
+              <input
+                type="number"
+                name="current"
+                id="current"
+                placeholder="Current weight *"
+                required
+              />
+            </label>
+          </li>
+        </ul>
         <div className={styles.bloodTypeFormContainer}>
+          <label>
+            <input
+              type="number"
+              name="desired"
+              id="desired"
+              placeholder="Desired weight *"
+              required
+            />
+          </label>
           <p className={styles.bloodTypeParagraph}>Blood type *</p>
           <div className={styles.bloodTypeForm}>
             <label>

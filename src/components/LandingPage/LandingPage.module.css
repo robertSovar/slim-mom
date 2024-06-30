@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: -32px;
 }
 
 .bloodTypeForm {
@@ -81,11 +82,22 @@ input[type="radio"] {
     padding: 32px;
   }
 
+  .landingPageTitle {
+    margin-bottom: 32px;
+  }
+
   .quizFormContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 150px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .bloodTypeFormContainer {
+    margin-top: 0;
+  }
+
+  .bloodTypeParagraph {
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    padding: 0 10px 10px 10px;
   }
 
   .landingPageTitle {
@@ -96,4 +108,32 @@ input[type="radio"] {
 }
 
 @media (min-width: 769px) {
+  .landingPageSection {
+    max-width: 1600px;
+    margin-top: 0;
+  }
+
+  .landingPageTitle {
+    margin-bottom: 32px;
+  }
+
+  .quizFormContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .bloodTypeFormContainer {
+    margin-top: 0;
+  }
+
+  .bloodTypeParagraph {
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    padding: 0 10px 10px 10px;
+  }
+
+  .landingPageTitle {
+    max-width: 648px;
+    font-size: 34px;
+    line-height: 47px;
+  }
 }

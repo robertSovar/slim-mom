@@ -1,5 +1,9 @@
 @import "normalize.css";
 
+html,
+body {
+  height: 100vh;
+}
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -12,4 +16,32 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  body {
+    background-image: url(./assets/images/background-images/banana-background-t-1x.webp),
+      url(./assets/images/background-images/leafs-background-t-1x.webp),
+      url(./assets/images/background-images/strawberry-background-t-1x.webp),
+      url(./assets/images/background-images/shadowTab.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: bottom right, left bottom, right bottom 120px;
+    background-size: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(./assets/images/background-images/banana-background-d-1x.webp),
+      url(./assets/images/background-images/leafs-background-d-1x.webp),
+      url(./assets/images/background-images/strawberry-background-d-1x.webp),
+      url(./assets/images/background-images/shadowDesk.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: top right, center 100px, bottom right, bottom right;
+    background-size: auto;
+  }
 }
