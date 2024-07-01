@@ -1,6 +1,35 @@
+import { useState, useEffect } from "react";
+import Modal from "../../assets/utils/Modal/Modal.jsx";
 import styles from "./LandingPage.module.css";
 
 function LandingPage() {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  function handleEscClose(e) {
+    if (e.key === "Escape") {
+      setIsOpenModal(false);
+    }
+  }
+
+  useEffect(() => {
+    if (isOpenModal === true) {
+      document.addEventListener("keydown", handleEscClose);
+    } else {
+      document.removeEventListener("keydown", handleEscClose);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [isOpenModal]);
+
+  function showModal() {
+    setIsOpenModal(true);
+  }
+
+  function hideModal() {
+    setIsOpenModal(false);
+  }
   return (
     <section className={styles.landingPageSection}>
       <h1 className={styles.landingPageTitle}>
@@ -74,9 +103,15 @@ function LandingPage() {
           </div>
         </div>
         <div className={styles.bloodTypeBtnContainer}>
-          <button type="submit" className={styles.submitFormBtn}>
+          <button
+            type="submit"
+            className={styles.submitFormBtn}
+            onClick={showModal}
+            onKeyDown={handleEscClose}
+          >
             Start losing weight
           </button>
+          <Modal show={isOpenModal} handleClose={hideModal} />
         </div>
       </form>
     </section>

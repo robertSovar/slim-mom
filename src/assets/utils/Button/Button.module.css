@@ -1,0 +1,13 @@
+.btnStyle {
+  outline: none;
+  border: none;
+  width: 210px;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 4%;
+  text-align: center;
+  background-color: rgba(252, 132, 45, 1);
+  color: white;
+}

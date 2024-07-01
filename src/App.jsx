@@ -1,14 +1,13 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
-import LandingPage from "./components/LandingPage/LandingPage";
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./pages/MainPage/MainPage";
 
 function App() {
   return (
-    <>
-      <Header />
-      <LandingPage />
-      <Footer />
-    </>
+    <div>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </div>
   );
 }
 
