@@ -26,6 +26,10 @@
   gap: 10px;
 }
 
+.activeLinksContainer a.active {
+  color: rgba(252, 132, 45, 1);
+}
+
 .headerUnderline {
   border: 2px solid rgba(224, 224, 224, 1);
 }
