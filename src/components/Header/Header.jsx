@@ -11,7 +11,7 @@ function Header() {
   return (
     <>
       <header className={styles.headerSection}>
-        <Link to={"/"}>
+        <Link to={""}>
           <div className={styles.logoAndSpanContainer}>
             <picture className={styles.logoSection}>
               <source
@@ -39,11 +39,17 @@ function Header() {
         </Link>
 
         <div className={styles.activeLinksContainer}>
-          <NavLink to={"/login"}>
-            <div className={styles.activeLinks}>Log in</div>
+          <NavLink
+            to={"/login"}
+            className={({ isActive }) => (isActive ? styles.activeLink : "")}
+          >
+            <div className={styles.navLinks}>Log in</div>
           </NavLink>
-          <NavLink to={"/register"}>
-            <div className={styles.activeLinks}>Registration</div>
+          <NavLink
+            to={"/register"}
+            className={({ isActive }) => (isActive ? styles.activeLink : "")}
+          >
+            <div className={styles.navLinks}>Registration</div>
           </NavLink>
         </div>
       </header>
