@@ -26,13 +26,8 @@
   gap: 10px;
 }
 
-.activeLink {
-  background-color: rgba(252, 132, 45, 1);
-  padding: 5px 5px;
-}
-
 .activeLink .navLinks {
-  color: white;
+  color: black;
 }
 
 .headerUnderline {

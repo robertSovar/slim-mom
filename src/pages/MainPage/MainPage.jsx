@@ -1,5 +1,5 @@
 import Footer from "../../components/Footer/Footer";
-import LandingPage from "../../components/LandingPage/LandingPage";
+import LandingPage from "../LandingPage/LandingPage";
 
 function MainPage() {
   return (

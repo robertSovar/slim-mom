@@ -1,10 +1,8 @@
-import styles from "./Button.module.css";
-
 function Button(props) {
-  const { buttonName } = props;
+  const { buttonName, style } = props;
   return (
     <div>
-      <button className={styles.btnStyle}>{buttonName}</button>
+      <button className={style}>{buttonName}</button>
     </div>
   );
 }

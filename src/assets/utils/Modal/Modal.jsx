@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Button from "../Button/Button";
 import backImg from "./../../images/modal-img/back-img.png";
 import "./Modal.css";
@@ -23,7 +22,7 @@ function Modal(props) {
         <h2>Your recommended daily calorie intake is</h2>
         <span>Number</span>
         <h3>Foods you should not eat</h3>
-        <Button buttonName={"Start losing weight"} />
+        <Button buttonName={"Start losing weight"} style={'modalSubmitBtn'} />
       </section>
     </div>
   );
