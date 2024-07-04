@@ -1,0 +1,68 @@
+.registerSection {
+  padding: 120px 40px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.registerTitle {
+  text-transform: uppercase;
+  color: rgba(252, 132, 45, 1);
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registerForm input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  padding: 15px;
+}
+
+.btnFormSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.registerBtn {
+  width: 182px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 4%;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  padding: 15px;
+  background-color: rgba(252, 132, 45, 1);
+  color: white;
+  cursor: pointer;
+}
+
+.loginBtn {
+  width: 182px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 4%;
+  border: 2px solid;
+  border-radius: 30px;
+  outline: none;
+  padding: 15px;
+  color: rgba(252, 132, 45, 1);
+  background-color: white;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 425px) {
+  .btnFormSection {
+    flex-direction: row;
+  }
+}

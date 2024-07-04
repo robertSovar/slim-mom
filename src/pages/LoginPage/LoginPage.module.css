@@ -1,7 +1,7 @@
 .loginSection {
-  padding: 20px;
-  width: 320px;
-  margin: 80px auto 0;
+  padding: 120px 40px;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 45px;
@@ -59,4 +59,10 @@
   color: rgba(252, 132, 45, 1);
   background-color: white;
   cursor: pointer;
+}
+
+@media screen and (min-width: 425px) {
+  .btnFormSection {
+    flex-direction: row;
+  }
 }

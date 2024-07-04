@@ -5,9 +5,9 @@ function LoginPage() {
   return (
     <section className={styles.loginSection}>
       <h2 className={styles.loginTitle}>Log in</h2>
-      <form action="login" className={styles.loginForm}>
+      <form action="login" className={styles.loginForm} id="login" name="login">
         <label htmlFor="login">
-          <input type="text" placeholder="Email *" />
+          <input type="text" placeholder="Email *" autoComplete="off" />
         </label>
         <label htmlFor="login">
           <input type="password" placeholder="Password *" autoComplete="off" />
