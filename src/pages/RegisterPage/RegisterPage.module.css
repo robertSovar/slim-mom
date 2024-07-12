@@ -61,6 +61,7 @@
   cursor: pointer;
 }
 
+
 @media screen and (min-width: 425px) {
   .btnFormSection {
     flex-direction: row;

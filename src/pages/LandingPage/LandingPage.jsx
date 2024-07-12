@@ -1,9 +1,25 @@
 import { useState, useEffect } from "react";
 import Modal from "../../assets/utils/Modal/Modal.jsx";
 import styles from "./LandingPage.module.css";
+import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 
 function LandingPage() {
+  const form = useForm();
+  const { register, handleSubmit, control, formState } = form;
+  const { errors } = formState;
+
+  const [isFormCompleted, setIsFormCompleted] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
+
+  function onSubmit(data) {
+    const { height, age, current, desired, bloodType } = data;
+    setIsFormCompleted(true);
+    console.log(
+      `Height: ${height} Age:${age} Current weight: ${current} Desired weight: ${desired} Blood type:${bloodType}`
+    );
+    setIsOpenModal(true);
+  }
 
   function handleEscClose(e) {
     if (e.key === "Escape") {
@@ -35,84 +51,117 @@ function LandingPage() {
       <h1 className={styles.landingPageTitle}>
         Calculate your daily calorie intake right now{" "}
       </h1>
-      <form action="quiz" className={styles.quizFormContainer}>
+      <form
+        action="quiz"
+        className={styles.quizFormContainer}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <ul className={styles.gridContainer}>
           <li className={styles.firstGrid}>
             {" "}
-            <label>
+            <label htmlFor="height">
               <input
                 type="number"
-                name="height"
                 id="height"
                 placeholder="Height *"
-                required
+                min={54}
+                max={246}
+                {...register("height", {
+                  required: "Height is requierd",
+                  min: { value: 54, message: "Height must be at least 54" },
+                  max: {
+                    value: 246,
+                    message: "Height must be no more than 246",
+                  },
+                })}
               />
+              <p className="error">{errors.height?.message}</p>
             </label>
           </li>
           <li className={styles.secondGrid}>
-            <label>
+            <label htmlFor="age">
               <input
                 type="number"
-                name="age"
                 id="age"
                 placeholder="Age *"
-                required
+                {...register("age", {
+                  required: "Age is required",
+                  min: { value: 14, message: "Age must be greater than 14" },
+                  max: { value: 122, message: "Age must be no more than 122" },
+                })}
               />
+              <p className="error">{errors.age?.message}</p>
             </label>
           </li>
           <li className={styles.thirdGrid}>
-            <label>
+            <label htmlFor="current">
               <input
                 type="number"
-                name="current"
                 id="current"
                 placeholder="Current weight *"
-                required
+                {...register("current", {
+                  required: "Current weight required",
+                  min: {
+                    value: 18,
+                    message: "Current weight must be at least 18",
+                  },
+                  max: {
+                    value: 635,
+                    message: "Current weight must be no more than 635",
+                  },
+                })}
               />
+              <p className="error">{errors.current?.message}</p>
             </label>
           </li>
         </ul>
         <div className={styles.bloodTypeFormContainer}>
-          <label>
+          <label htmlFor="desired">
             <input
               type="number"
-              name="desired"
               id="desired"
               placeholder="Desired weight *"
-              required
+              {...register("desired", {
+                required: "Desired weight is required",
+                min: {
+                  value: 18,
+                  message: "Current weight must be at least 18",
+                },
+                max: {
+                  value: 635,
+                  message: "Current weight must be no more than 635",
+                },
+              })}
             />
+            <p className="error">{errors.desired?.message}</p>
           </label>
           <p className={styles.bloodTypeParagraph}>Blood type *</p>
           <div className={styles.bloodTypeForm}>
             <label>
-              <input type="radio" name="blood_type" value="1" required />1
+              <input type="radio" value="1" {...register("bloodType")} />1
             </label>
             <br />
             <label>
-              <input type="radio" name="blood_type" value="2" />2
+              <input type="radio" value="2" {...register("bloodType")} />2
             </label>
             <br />
             <label>
-              <input type="radio" name="blood_type" value="3" />3
+              <input type="radio" value="3" {...register("bloodType")} />3
             </label>
             <br />
             <label>
-              <input type="radio" name="blood_type" value="4" />4
+              <input type="radio" value="4" {...register("bloodType")} />4
             </label>
             <br />
           </div>
         </div>
         <div className={styles.bloodTypeBtnContainer}>
-          <button
-            type="submit"
-            className={styles.submitFormBtn}
-            onClick={showModal}
-            onKeyDown={handleEscClose}
-          >
+          <button type="submit" className={styles.submitFormBtn}>
             Start losing weight
           </button>
           <Modal show={isOpenModal} handleClose={hideModal} />
         </div>
+        <DevTool control={control} />
       </form>
     </section>
   );

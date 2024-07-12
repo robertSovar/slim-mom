@@ -1,8 +1,10 @@
 function Button(props) {
-  const { buttonName, style } = props;
+  const { buttonName, style, type, onClick } = props;
   return (
     <div>
-      <button className={style}>{buttonName}</button>
+      <button className={style} type={type} onClick={onClick}>
+        {buttonName}
+      </button>
     </div>
   );
 }
