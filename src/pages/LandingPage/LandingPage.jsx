@@ -57,8 +57,7 @@ function LandingPage() {
         onSubmit={handleSubmit(onSubmit)}
       >
         <ul className={styles.gridContainer}>
-          <li className={styles.firstGrid}>
-            {" "}
+          <li>
             <label htmlFor="height">
               <input
                 type="number"
@@ -66,6 +65,7 @@ function LandingPage() {
                 placeholder="Height *"
                 min={54}
                 max={246}
+                style={{ width: "219.1px" }}
                 {...register("height", {
                   required: "Height is requierd",
                   min: { value: 54, message: "Height must be at least 54" },
@@ -78,7 +78,7 @@ function LandingPage() {
               <p className="error">{errors.height?.message}</p>
             </label>
           </li>
-          <li className={styles.secondGrid}>
+          <li>
             <label htmlFor="age">
               <input
                 type="number"
@@ -93,7 +93,7 @@ function LandingPage() {
               <p className="error">{errors.age?.message}</p>
             </label>
           </li>
-          <li className={styles.thirdGrid}>
+          <li>
             <label htmlFor="current">
               <input
                 type="number"
