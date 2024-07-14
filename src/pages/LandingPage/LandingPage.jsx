@@ -65,7 +65,7 @@ function LandingPage() {
                 placeholder="Height *"
                 min={54}
                 max={246}
-                style={{ width: "219.1px" }}
+                style={{ width: "218px" }}
                 {...register("height", {
                   required: "Height is requierd",
                   min: { value: 54, message: "Height must be at least 54" },
@@ -74,6 +74,7 @@ function LandingPage() {
                     message: "Height must be no more than 246",
                   },
                 })}
+                autoComplete="off"
               />
               <p className="error">{errors.height?.message}</p>
             </label>
@@ -89,7 +90,9 @@ function LandingPage() {
                   min: { value: 14, message: "Age must be greater than 14" },
                   max: { value: 122, message: "Age must be no more than 122" },
                 })}
+                autoComplete="off"
               />
+
               <p className="error">{errors.age?.message}</p>
             </label>
           </li>
@@ -110,6 +113,7 @@ function LandingPage() {
                     message: "Current weight must be no more than 635",
                   },
                 })}
+                autoComplete="off"
               />
               <p className="error">{errors.current?.message}</p>
             </label>
