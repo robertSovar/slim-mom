@@ -4,10 +4,12 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Layout from "./assets/utils/Layout/Layout";
+import { Provider } from "react-redux";
+import store from "./Store";
 
 function App() {
   return (
-    <div>
+    <Provider store={store}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
@@ -16,7 +18,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </div>
+    </Provider>
   );
 }
 
