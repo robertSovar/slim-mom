@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
@@ -10,14 +10,14 @@ import store from "./Store";
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+      <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
-      </Router>
+      </Routes>
     </Provider>
   );
 }
