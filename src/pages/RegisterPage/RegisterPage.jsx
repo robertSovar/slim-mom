@@ -21,7 +21,7 @@ function RegisterPage() {
 
     try {
       const response = await axios.post(
-        "https://slim-mom-backend-c3173ac7e4c4.herokuapp.com/api/auth/signup",
+        "https://slim-mom-backend-gt3y.onrender.com/api/auth/signup",
         { name, email, password }
       );
       console.log("Registration successful:", response.data);

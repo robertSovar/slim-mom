@@ -22,7 +22,7 @@ function LoginPage() {
 
     try {
       const response = await axios.post(
-        "https://slim-mom-backend-c3173ac7e4c4.herokuapp.com/api/auth/login",
+        "https://slim-mom-backend-gt3y.onrender.com/api/auth/login",
         { email, password }
       );
       console.log("Login successful:", response.data);
