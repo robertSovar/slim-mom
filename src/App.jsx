@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
@@ -11,12 +11,12 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Switch path="/" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<NotFoundPage />} />
-        </Switch>
+        </Route>
       </Router>
     </Provider>
   );
