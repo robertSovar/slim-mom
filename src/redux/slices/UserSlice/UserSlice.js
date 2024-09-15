@@ -6,7 +6,7 @@ export const registerUser = createAsyncThunk(
   async (registerCredential) => {
     const request = await axios.post(
       `
-https://slim-mom-backend-c3173ac7e4c4.herokuapp.com/api/auth/signup`,
+https://slim-mom-backend-gt3y.onrender.com/api/auth/signup`,
       registerCredential
     );
     const response = await request.data.data;
